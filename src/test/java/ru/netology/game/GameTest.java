@@ -70,4 +70,10 @@ class GameTest {
         game.register(player1);
         Assertions.assertThrows(NotFoundException.class, () -> game.round(player1, player2));
     }
+
+    @Test
+    void roundSecondNoOneRegister1() {
+        Assertions.assertThrows(NotFoundException.class, () -> game.round(player1, player2));
+    }
+
 }
